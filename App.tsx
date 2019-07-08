@@ -1,11 +1,10 @@
 import React from "react"
-import { StyleSheet } from "react-native"
 import * as Font from "expo-font"
 import Constants from "expo-constants"
 import App from "./src"
 
 let AppContainer
-if (Constants.manifest) {
+if (Constants.appOwnership === 'expo') {
   // Use AnimatedSplashScreen from the 'expo' package if we are in managed context
   let AnimatedSplashScreen = require("./AnimatedSplashScreen").default
   AppContainer = class extends React.Component {
@@ -30,9 +29,6 @@ if (Constants.manifest) {
     }
   }
 } else {
-  // Otherwise just use a simple AppContainer. We also need to temporarily set
-  // font processor
-  StyleSheet.setStyleAttributePreprocessor("fontFamily", Font.processFontFamily)
   AppContainer = class extends React.Component<any, { loaded: boolean }> {
     constructor(props) {
       super(props)

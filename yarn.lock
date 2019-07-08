@@ -889,13 +889,6 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.5.1":
-  version "7.5.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.1.tgz#51b56e216e87103ab3f7d6040b464c538e242888"
-  integrity sha512-g+hmPKs16iewFSmW57NkH9xpPkuYD1RV3UE2BCkXx9j+nhhRb9hsiSxPmEa67j35IecTQdn4iyMtHMbt5VoREg==
-  dependencies:
-    regenerator-runtime "^0.13.2"
-
 "@babel/template@^7.0.0", "@babel/template@^7.1.0", "@babel/template@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz#f4b88d1225689a08f5bc3a17483545be9e4ed237"
@@ -3061,7 +3054,14 @@ expo-file-system@~5.0.0:
   dependencies:
     uuid-js "^0.7.5"
 
-expo-font@~5.0.0, expo-font@~5.0.1:
+expo-font@6.0.0-alpha.0:
+  version "6.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-6.0.0-alpha.0.tgz#19e071d50048cec745c47873ef093c7d186c498e"
+  integrity sha512-gOCy+J1j4L+KJatWkuv8/80AN1A7pXFDrk2yDfQnWSfiuS2QrF0Fa4Ge1wtM5PvE4DF8eff4i2oypR8bOzqfbg==
+  dependencies:
+    fontfaceobserver "^2.1.0"
+
+expo-font@~5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/expo-font/-/expo-font-5.0.1.tgz#b3174134efd0ce3382db3a6c282147cba8bee203"
   integrity sha512-fa/z31lLi1ut6IGTf9/Kvw9KAlwSGQaBkuunuqjrW2ephqiXlHTeOOsaqKMirtmiqgsKOJysdlYUH1Aw03Y2bg==
