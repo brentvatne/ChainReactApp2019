@@ -29,6 +29,8 @@ if (Constants.appOwnership === 'expo') {
     }
   }
 } else {
+  // Otherwise don't bother. We could use react-native-splash-screen if wanted
+  // to here.
   AppContainer = class extends React.Component<any, { loaded: boolean }> {
     constructor(props) {
       super(props)
