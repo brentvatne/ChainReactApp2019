@@ -2,7 +2,7 @@ import { types, onSnapshot } from "mobx-state-tree"
 import ApolloClient from "apollo-boost"
 import { Environment } from "../environment"
 import * as storage from "../../utils/storage"
-import { Reactotron } from "../../services/reactotron"
+// import { Reactotron } from "../../services/reactotron"
 import { Api } from "../../services/api"
 import { NavigationStoreModel } from "../navigation-store"
 import { createTalkStoreModel } from "../talk-store"
@@ -58,9 +58,9 @@ export async function setupRootStore() {
   }
 
   // reactotron logging
-  if (__DEV__) {
-    env.reactotron.setRootStore(rootStore, data)
-  }
+  // if (__DEV__) {
+  //   env.reactotron.setRootStore(rootStore, data)
+  // }
 
   // track changes & save to storage
   onSnapshot(rootStore, snapshot => storage.save(ROOT_STATE_STORAGE_KEY, snapshot))
@@ -82,12 +82,12 @@ export async function createEnvironment() {
   const env = new Environment()
 
   // create each service
-  env.reactotron = new Reactotron()
+  // env.reactotron = new Reactotron()
   env.api = new Api()
   env.graphql = new ApolloClient({ uri: GRAPHQL_URI })
 
   // allow each service to setup
-  await env.reactotron.setup()
+  // await env.reactotron.setup()
   await env.api.setup()
 
   return env

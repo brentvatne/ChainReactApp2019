@@ -1,4 +1,4 @@
-import { Reactotron } from "../services/reactotron"
+// import { Reactotron } from "../services/reactotron"
 import { Api } from "../services/api"
 import DefaultClient from "apollo-boost"
 
@@ -10,7 +10,7 @@ export class Environment {
   /**
    * Reactotron is only available in dev.
    */
-  reactotron: Reactotron
+  // reactotron: Reactotron
 
   /**
    * Our api.
