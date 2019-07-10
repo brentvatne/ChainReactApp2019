@@ -1,26 +1,31 @@
 import React from "react"
-import AnimatedSplashScreen from "./AnimatedSplashScreen"
+import { View } from "react-native"
 import * as Font from "expo-font"
 import App from "./src"
 
-export default class AppContainer extends React.Component {
+export default class AppContainer extends React.Component<any, { isReady: boolean }> {
+  state = {
+    isReady: false,
+  }
+
+  componentDidMount() {
+    this._loadAssetsAsync()
+  }
+
   _loadAssetsAsync = async () => {
-    await Promise.all([
-      Font.loadAsync({
-        "Gotham Rounded": require("./assets/GothamRnd-Book.otf"),
-        "Gotham Rounded Bold": require("./assets/GothamRnd-Bold.otf"),
-      }),
-    ])
+    await Font.loadAsync({
+      "Gotham Rounded": require("./assets/GothamRnd-Book.otf"),
+      "Gotham Rounded Bold": require("./assets/GothamRnd-Bold.otf"),
+    })
+
+    this.setState({ isReady: true })
   }
 
   render() {
-    return (
-      <AnimatedSplashScreen
-        loadAsync={this._loadAssetsAsync}
-        splashImageSource={require("./assets/splash.png")}
-      >
-        <App {...this.props} />
-      </AnimatedSplashScreen>
-    )
+    if (!this.state.isReady) {
+      return <View />
+    }
+
+    return <App {...this.props} />
   }
 }
