@@ -8,9 +8,11 @@ PODS:
   - EXFileSystem (5.0.1):
     - UMCore
     - UMFileSystemInterface
-  - EXFont (5.0.1):
+  - EXFont (6.0.0-alpha.0):
     - UMCore
     - UMFontInterface
+  - EXHaptics (5.0.1):
+    - UMCore
   - EXKeepAwake (5.0.1):
     - UMCore
   - EXLinearGradient (5.0.1):
@@ -91,7 +93,7 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - RNGestureHandler (1.2.2):
+  - RNGestureHandler (1.3.0):
     - React
   - UMBarCodeScannerInterface (2.0.1)
   - UMCameraInterface (2.0.1)
@@ -116,6 +118,7 @@ DEPENDENCIES:
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
+  - EXHaptics (from `../node_modules/expo-haptics/ios`)
   - EXKeepAwake (from `../node_modules/expo-keep-awake/ios`)
   - EXLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - EXLocalization (from `../node_modules/expo-localization/ios`)
@@ -174,6 +177,9 @@ EXTERNAL SOURCES:
   EXFont:
     :path: !ruby/object:Pathname
     path: "../node_modules/expo-font/ios"
+  EXHaptics:
+    :path: !ruby/object:Pathname
+    path: "../node_modules/expo-haptics/ios"
   EXKeepAwake:
     :path: !ruby/object:Pathname
     path: "../node_modules/expo-keep-awake/ios"
@@ -251,7 +257,8 @@ SPEC CHECKSUMS:
   EXAppLoaderProvider: 8f2c04a0a8d9be91f7c37c2b8824077ee5d4bc01
   EXConstants: 9fe56eec8bf0a3ee9beb8f3381fa91340a5b1e57
   EXFileSystem: 96624bd4b93a0684335c421a6567a92b25bd7ddb
-  EXFont: 3e55fdd433fe24717f61315fbb07e8f71ddd98bc
+  EXFont: 522a4096cb9f68bea964c3f52bfe304c46d93132
+  EXHaptics: 6d594612afa321bfc8e167bdfb0b47f940f8f537
   EXKeepAwake: 54eeb7ab22c9b29cba61f8c298a90e51925ec5d1
   EXLinearGradient: 347f119afc85232c91537b43bd26cbc1e29588ff
   EXLocalization: aeade2d056f913f7a4f5042d16a2ab0e83ed8451
@@ -263,7 +270,7 @@ SPEC CHECKSUMS:
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
   React: 76e6aa2b87d05eb6cccb6926d72685c9a07df152
-  RNGestureHandler: 0e0813f9370d00efc5dd7a7f19f579260d0244c2
+  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   UMBarCodeScannerInterface: d5602e23de37f95bb4ee49ee3b2711e128058ae9
   UMCameraInterface: dde8491778ed062348e569bad33a890e60c32c9d
   UMConstantsInterface: de48a63a5af572fc4dcc0e68051b00503b83e301
